@@ -1,0 +1,19 @@
+       ## Basic Selector ##
+
+Select by id :- $("#idName")
+
+Select by class :- $(".className")
+
+Select by Tag Name :- $("tagName") 
+
+
+   ## Advance Selector ##
+
+   $('*')
+   $('ul li')
+   $('.abc, .prk')
+   $('h1, p, div')
+   $('p:first')
+   $('p:last')
+   $('li:even')
+   $('li:odd')
