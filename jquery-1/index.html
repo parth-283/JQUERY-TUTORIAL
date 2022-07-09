@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        background-color: cornflowerblue;
+        text-align: center;
+        height: 100vh;
+      }
+      .test {
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+      }
+      .container {
+        display: flex;
+        justify-content: SPACE-AROUND;
+        margin-top: 48px;
+      }
+      #test-1 {
+        background-color: blueviolet;
+      }
+      #test-2 {
+        background-color: darkblue;
+      }
+      p {
+        font-size: 27px;
+      }
+      h1,
+      h2 {
+        font-size: 50px;
+      }
+    </style>
+    <title>J-QUERY_1</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>JQuery Syntax</h1>
+      <div class="container">
+        <div id="test-1" class="test">
+          <h2>Test Box 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            distinctio explicabo harum fugiat! Nostrum, mollitia adipisci quidem
+            minima soluta delectus ut vitae at nobis eligendi, ducimus nam
+            corrupti veritatis esse.10
+          </p>
+        </div>
+        <div id="test-2" class="test">
+          <h2>Test Box 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            distinctio explicabo harum fugiat! Nostrum, mollitia adipisci quidem
+            minima soluta delectus ut vitae at nobis eligendi, ducimus nam
+            corrupti veritatis esse.10
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        console.log("hello");
+        var a = $("#test-1").html();
+        var b = $("#test-2").html();
+        console.log(a);
+        console.log(b);
+      });
+    </script>
+  </body>
+</html>
