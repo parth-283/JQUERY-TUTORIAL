@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #box {
+        background: pink;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+    </style>
+    <title>Events</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>JQuery Events</h1>
+      <div id="box" class="test">
+        <h2>Test Box 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+          explicabo harum fugiat! Nostrum, mollitia adipisci quidem minima
+          soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
+          veritatis esse.10
+        </p>
+      </div>
+      <div>
+        <h2>Form Events</h2>
+        <form action="" id="sform">
+          <label for="">Name</label><input type="text" id="sname" /> <br />
+          <br />
+          <label for="">Class</label><input type="text" id="sclass" /> <br />
+          <br />
+          <label for="">Country</label>
+          <select id="scountry">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Russia">Russia</option>
+          </select>
+          <br />
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // ## Mouse Events ##
+        // click
+        $("#box").click(function () {
+          $("#box").css("background-color", "limegreen");
+        });
+        // dblclick
+        $("#box").dblclick(function () {
+          $("#box").css("background-color", "lightgrey");
+        });
+        // contextmenu
+        $("#box").contextmenu(function () {
+          $("#box").css("background-color", "darkgreen");
+        });
+        // mouseenter
+        $("#box").mouseenter(function () {
+          $("#box").css("font-size", "30px");
+        });
+        // mouseleave
+        $("#box").mouseleave(function () {
+          $("#box").css("font-size", "large");
+        });
+        // ## Keyboard Events ##
+        // keypress
+        $("body").keypress(function () {
+          $(this).css("background-color", "lightgrey");
+        });
+        // keyup
+        $("body").keyup(function () {
+          $(this).css("background-color", "lightgreen");
+        });
+        // keydown
+        $("body").keydown(function () {
+          $(this).css("background-color", "blue");
+        });
+        // ## Form Events ##
+        // focus
+        $("#sname,#sclass,#scountry").focus(function () {
+          $(this).css("background-color", "lightblue");
+        });
+        // blur
+        $("#sname,#sclass,#scountry").blur(function () {
+          $(this).css("background-color", "green");
+        });
+        // change
+        $("#scountry").change(function () {
+          $(this).css("background-color", "grey");
+        });
+        // select
+        $("#sname ,#sclass").select(function () {
+          $(this).css("background-color", "yellow");
+        });
+        // submit
+        $("#sform").submit(function () {
+          $(this).css("background-color", "red");
+          alert("Submited")
+        });
+      });
+    </script>
+  </body>
+</html>

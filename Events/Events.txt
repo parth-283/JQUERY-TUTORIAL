@@ -1,0 +1,20 @@
+    ## Mouse Events ##
+
+       click()
+       dblclick()
+       contextmenu()
+       mouseenter()
+       mouseleave()
+
+    ## Keyboard Events ##
+
+        keypress()
+        keydown()
+        keyup()
+
+    ## Form Events ##
+        focus()
+        blur()
+        change()
+        select()
+        submit()
