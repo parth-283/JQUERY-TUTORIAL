@@ -61,3 +61,7 @@
         outerHeight()
         outerWidth(true)
         outerHeight(true)
+
+    **  Position & Offset Get & Set Methods **
+        Position()
+        Offset()

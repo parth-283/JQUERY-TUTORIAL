@@ -109,6 +109,9 @@
       <button id="outerHeightbtn">outerHeight</button>
       <button id="outerWidthtruebtn">outerWidth(true)</button>
       <button id="outerHeighttruebtn">outerHeight(true)</button>
+      <button id="Positionbtn">Position</button>
+      <button id="Offsetbtn">Offset</button>
+      <button id="Offsetvaluebtn">Offset Set Value</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -310,6 +313,20 @@
         // outerHeight(true)
         $("#outerHeighttruebtn").click(function () {
           console.log($("#box").outerHeight(true), "Box outerHeight(true)");
+        });
+        // **  Position & Offset Get & Set Methods **
+        // Get
+        // Position()
+        $("#Positionbtn").click(function () {
+          console.log($("#box").position(), "Box Position");
+        });
+        // Offset()
+        $("#Offsetbtn").click(function () {
+          console.log($("#box").offset(), "Box Offset");
+        });
+        // Set
+        $("#Offsetvaluebtn").click(function () {
+          $("#box").offset({top:0,left:0})
         });
       });
     </script>
