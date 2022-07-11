@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #Main-Outer {
+        border: 1px solid grey;
+        background-color: lightgrey;
+        margin: 10px;
+        padding: 10px;
+      }
+      #outer{
+        border: 1px solid orange;
+        background-color: rgb(226, 191, 124);
+        margin: 10px;
+        padding: 10px;
+      }
+      #inner{
+        border: 1px solid rgb(248, 126, 147);
+        background-color: pink;
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+      }
+      button {
+        padding: 5px;
+        margin: 10px;
+      }
+      
+    </style>
+    <title>J-QUERY_1</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>JQuery Syntax</h1>
+      <div id="Main-Outer" class="test">
+        <h2>Main Outer</h2>
+        <div id="outer">
+          <h2>Outer</h2>
+          <div id="inner">
+            <h2 id="child-head">Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="hidebtn">Hide</button>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // ** Ancestors Methods **
+        // psrent()
+        $('#child-C').parent().css('background','yellow')
+        // parents()
+        $('#child-C').parents().css('background','grey')
+        // parentsUntil()
+        $('#child-C').parentsUntil().css('background','pink')
+        // closest()
+        // offsetParent()
+        // ** Descendants Methods **
+        // ** Siblings Methods **
+        // ** Filtering Methods **
+      });
+    </script>
+  </body>
+</html>
