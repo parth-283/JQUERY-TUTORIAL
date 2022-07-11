@@ -55,7 +55,7 @@
   <body>
     <div class="main">
       <h1 class="heading">JQuery Methods</h1>
-      <div id="box">
+      <div id="box" class="test">
         <h2>Test Box 1</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
@@ -116,6 +116,7 @@
       <button id="ScrollLeftbtn">ScrollLeft</button>
       <button id="ScrollTopvaluebtn">ScrollTop Value</button>
       <button id="ScrollLeftvaluebtn">ScrollLeft Value</button>
+      <button id="hasclassbtn">HasClass</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -555,6 +556,10 @@
         // ScrollLeft Value
         $("#ScrollLeftvaluebtn").click(function () {
           console.log($(window).scrollLeft(200), "ScrollLeft Value Set");
+        });
+        //     ** hasclass Methods **
+        $("#hasclassbtn").click(function () {
+        console.log( $("#box").hasClass('test'),"HasClass");
         });
 
       });

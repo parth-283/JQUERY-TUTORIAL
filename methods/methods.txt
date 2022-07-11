@@ -69,3 +69,5 @@
     **  ScrollTop & ScrollLeft  Get & Set Methods **
         ScrollTop()
         ScrollLeft()
+
+    ** hasclass Methods **
