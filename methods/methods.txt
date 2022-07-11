@@ -43,4 +43,8 @@
     **  ReplaceWith & ReplaceAll Methods **
         replaceWith()
         replaceAll()
+
+    **  Wrap & Unwrap Methods **
+        Wrap()
+        Unwrap()
     
