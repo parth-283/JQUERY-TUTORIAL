@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #box {
+        border: 1px solid black;
+        background-color: rgb(176, 245, 207);
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+      }
+      button {
+        padding: 5px;
+        margin: 10px;
+      }
+    </style>
+    <title>J-QUERY_1</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>JQuery Syntax</h1>
+      <div id="box" class="test">
+        <h2>Test Box 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+          explicabo harum fugiat! Nostrum, mollitia adipisci quidem minima
+          soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
+          veritatis esse.
+        </p>
+      </div>
+      <div>
+        <button id="hidebtn">Hide</button>
+        <button id="showbtn">Show</button>
+        <button id="togglebtn">Toggle Hide & Show</button>
+        <button id="fadeoutbtn">fadeout</button>
+        <button id="fadeinbtn">fadein</button>
+        <button id="fadeTogglebtn">fadeToggle</button>
+        <button id="fadeTobtn">fadeTo</button>
+        <button id="slideUpbtn">slideUp</button>
+        <button id="SlideDownbtn">SlideDown</button>
+        <button id="slideTogglebtn">slideToggle</button>
+        <button id="Animatebtn">Animate</button>
+        <button id="stopbtn">Animate Stop</button>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        //** Hide & Show effect **
+        // hide()
+        $("#hidebtn").click(function () {
+          $("#box p").hide(5000, function () {
+            console.log(" Now it's hidden");
+          });
+        });
+        // show()
+        $("#showbtn").click(function () {
+          $("#box p").show("fast");
+        });
+        // toggle()
+        $("#togglebtn").click(function () {
+          $("#box h2").toggle("slow");
+        });
+        // ** Fade effect **
+        // fadein()
+        $("#fadeinbtn").click(function () {
+          $("#box h2").fadeIn("slow");
+        });
+        // fadeout()
+        $("#fadeoutbtn").click(function () {
+          $("#box h2").fadeOut("slow");
+        });
+        // fade Toggle()
+        $("#fadeTogglebtn").click(function () {
+          $("#box h2").fadeToggle("slow");
+        });
+        // fade To()
+        $("#fadeTobtn").click(function () {
+          $("#box h2").fadeTo("slow", 0.5);
+        });
+        // ** Fade effect **
+        // SlideDown()
+        $("#SlideDownbtn").click(function () {
+          $("#box h2").slideDown("slow");
+        });
+        // slideUp()
+        $("#slideUpbtn").click(function () {
+          $("#box h2").slideUp("slow");
+        });
+        // slideToggle()
+        $("#slideTogglebtn").click(function () {
+          $("#box h2").slideToggle("slow");
+        });
+        // ** Animate effect **
+        $("#Animatebtn").click(function () {
+          $("#box").animate({ left: "150px", width: "200px", fontSize:"19px" }, 3000);
+          // $("#box").animate({ top: "150px" }, "slow");
+        });
+        // ** Stop effect **
+        $("#stopbtn").click(function () {
+          $("#box").stop(true,true);
+        });
+      });
+    </script>
+  </body>
+</html>
