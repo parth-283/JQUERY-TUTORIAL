@@ -65,3 +65,7 @@
     **  Position & Offset Get & Set Methods **
         Position()
         Offset()
+
+    **  ScrollTop & ScrollLeft  Get & Set Methods **
+        ScrollTop()
+        ScrollLeft()
