@@ -19,9 +19,8 @@
         padding: 10px;
         border: 1px solid #000;
       }
-      #box2{
+      #box2 {
         border: 2px solid #000;
-
       }
       #sform {
         background: rgb(192, 255, 245);
@@ -54,8 +53,20 @@
           soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
           veritatis esse.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+          explicabo harum fugiat! Nostrum, mollitia adipisci quidem minima
+          soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
+          veritatis esse.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+          explicabo harum fugiat! Nostrum, mollitia adipisci quidem minima
+          soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
+          veritatis esse.
+        </p>
       </div>
-      <br/>
+      <br />
       <div id="box2">
         <p>This is Another DIV.</p>
       </div>
@@ -74,6 +85,8 @@
       <button id="appendtobtn">AppendTo</button>
       <button id="prependtobtn">PrependTo</button>
       <button id="clonebtn">Clone</button>
+      <button id="replacewithbtn">Replace With</button>
+      <button id="replaceallbtn">Replace All</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -212,10 +225,19 @@
           $("<h5> PrependTo : Parth Kathiriya</h5>").prependTo("#box ");
         });
         //  **  Clone Methods **
-        $("#clonebtn").click(function(){
-          $("#box h2").clone().prependTo('#box2')
-          $("#box p").clone().appendTo('#box2')
-        })
+        $("#clonebtn").click(function () {
+          $("#box h2").clone().prependTo("#box2");
+          $("#box p").clone().appendTo("#box2");
+        });
+        // **  ReplaceWith & ReplaceAll Methods **
+        // replaceWith()
+        $("#replacewithbtn").click(function () {
+          $("#box p:nth-child(3)").replaceWith("<h3>Replace With</h3>");
+        });
+        // replaceAll()
+        $("#replaceallbtn").click(function () {
+          $(" <h3>Replace With</h3>").replaceAll("#box p:first");
+        });
       });
     </script>
   </body>
