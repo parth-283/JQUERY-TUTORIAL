@@ -1,0 +1,35 @@
+    ** Hide & Show effect **
+    hide()
+    show()
+    toggle()
+
+    ** Fade effect **
+    fadein()
+    fadeout()
+    fade Toggle()
+    fade To()
+
+    ** Fade effect **
+    SlideDown()
+    slideUp()
+    slideToggle()
+
+    ** Animate effect **
+
+    ** Stop effect **
+
+    ## DOM Traversing Method ##
+    ** Ancestors Methods **
+    psrent()
+    parents()
+    parentsUntil()
+    closest()
+    offsetParent()
+
+    ** Descendants Methods **
+
+    ** Siblings Methods **
+
+    ** Filtering Methods **
+
+
