@@ -19,6 +19,10 @@
         padding: 10px;
         border: 1px solid #000;
       }
+      #box2{
+        border: 2px solid #000;
+
+      }
       #sform {
         background: rgb(192, 255, 245);
         border: 1px solid #000;
@@ -51,6 +55,10 @@
           veritatis esse.
         </p>
       </div>
+      <br/>
+      <div id="box2">
+        <p>This is Another DIV.</p>
+      </div>
       <button id="clickbutton">Set Value</button>
       <button id="addbutton">Add Class</button>
       <button id="removebtn">Remove Class</button>
@@ -65,6 +73,7 @@
       <button id="RemoveBtn">Remove</button>
       <button id="appendtobtn">AppendTo</button>
       <button id="prependtobtn">PrependTo</button>
+      <button id="clonebtn">Clone</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -202,6 +211,11 @@
         $("#prependtobtn").click(function () {
           $("<h5> PrependTo : Parth Kathiriya</h5>").prependTo("#box ");
         });
+        //  **  Clone Methods **
+        $("#clonebtn").click(function(){
+          $("#box h2").clone().prependTo('#box2')
+          $("#box p").clone().appendTo('#box2')
+        })
       });
     </script>
   </body>

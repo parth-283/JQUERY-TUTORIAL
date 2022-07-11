@@ -38,3 +38,4 @@
         appendto()
         prependto()
     
+    **  Clone Methods **
