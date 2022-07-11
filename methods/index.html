@@ -61,6 +61,10 @@
       <button id="prependbtn">Prepend</button>
       <button id="afterbtn">After</button>
       <button id="beforebtn">Before</button>
+      <button id="emptybtn">Empty</button>
+      <button id="RemoveBtn">Remove</button>
+      <button id="appendtobtn">AppendTo</button>
+      <button id="prependtobtn">PrependTo</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -164,22 +168,40 @@
         });
         //  **  Append & Prepend Methods **
         // Append
-        $("#appendbtn").click(function(){
-          $("#box").append("<h2> Append : Parth Kathiriya</h2>")
-        })
+        $("#appendbtn").click(function () {
+          $("#box").append("<h2> Append : Parth Kathiriya</h2>");
+        });
         // Prepend
-        $("#prependbtn").click(function(){
-          $("#box").prepend("<h3> Prepend : Parth Kathiriya</h3>")
-        })
-         //  **   After & Before Methods **
+        $("#prependbtn").click(function () {
+          $("#box").prepend("<h3> Prepend : Parth Kathiriya</h3>");
+        });
+        //  **   After & Before Methods **
         // After
-        $("#afterbtn").click(function(){
-          $("#box").after("<h2> After : Parth Kathiriya</h2>")
-        })
+        $("#afterbtn").click(function () {
+          $("#box").after("<h2> After : Parth Kathiriya</h2>");
+        });
         // Before
-        $("#beforebtn").click(function(){
-          $("#box").before("<h3> Before : Parth Kathiriya</h3>")
-        })
+        $("#beforebtn").click(function () {
+          $("#box").before("<h3> Before : Parth Kathiriya</h3>");
+        });
+        // **  Empty & Remove Methods **
+        // empty
+        $("#emptybtn").click(function () {
+          $("#box").empty();
+        });
+        // remove
+        $("#RemoveBtn").click(function () {
+          $("#box").remove();
+        });
+        //  **  AppendTo & PrependTo Methods **
+        // AppendTo
+        $("#appendtobtn").click(function () {
+          $(" <h4> AppendTo : Parth Kathiriya</h4>").appendTo("#box");
+        });
+        // PrependTo
+        $("#prependtobtn").click(function () {
+          $("<h5> PrependTo : Parth Kathiriya</h5>").prependTo("#box ");
+        });
       });
     </script>
   </body>

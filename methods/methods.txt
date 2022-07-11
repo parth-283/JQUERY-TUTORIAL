@@ -30,4 +30,11 @@
         after()
         before()
 
+ **  Empty & Remove Methods **
+        empty()
+        remove()
+
+    **  AppendTo & PrependTo Methods **
+        appendto()
+        prependto()
     
