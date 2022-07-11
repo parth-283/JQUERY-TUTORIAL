@@ -18,3 +18,9 @@
         change()
         select()
         submit()
+
+    ## Window Events ##
+    *load()
+    *unload()
+    resize()
+    scroll()
