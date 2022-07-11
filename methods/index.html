@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background: rgb(190, 253, 184);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #box {
+        background: pink;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      #sform {
+        background: rgb(192, 255, 245);
+        border: 1px solid #000;
+        padding: 10px;
+      }
+      .red {
+        background: red;
+      }
+    </style>
+    <title>JQuery Methods</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="heading">JQuery Methods</h1>
+      <div id="box" class="test">
+        <h2>Test Box 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+          explicabo harum fugiat! Nostrum, mollitia adipisci quidem minima
+          soluta delectus ut vitae at nobis eligendi, ducimus nam corrupti
+          veritatis esse.
+        </p>
+      </div>
+      <button id="clickbutton">Set Value</button>
+      <div>
+        <h2>Form</h2>
+        <form action="" id="sform">
+          <label for="">Name</label><input type="text" id="sname" /> <br />
+          <br />
+          <label for="">Class</label><input type="text" id="sclass" /> <br />
+          <br />
+          <label for="">Country</label>
+          <select id="scountry">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Russia">Russia</option>
+          </select>
+          <br />
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // ** Get Methods **
+        // text()
+        let gethtml = $("#box").html();
+        console.log(gethtml, "html####");
+        // html()
+        let gettext = $("#box").text();
+        console.log(gettext, "text####");
+        // attr()
+        let getattr = $("#box").attr("class");
+        console.log(getattr, "attr####");
+        // val()
+        $("#sform").submit(function () {
+          let name = $("#sname").val();
+          let sclass = $("#sclass").val();
+          let scountry = $("#scountry").val();
+          alert(
+            " name#### : " +
+              name +
+              " sclass#### : " +
+              sclass +
+              " scountry#### : " +
+              scountry
+          );
+        });
+        // ** Set Methods **
+        $("#clickbutton").click(function () {
+          // text()
+          $("#box h2").text(" Set New Value ");
+          // html()
+          $("#box p").html(" <u>Set New Underline Value </u>");
+          // attr()
+          $("#box h2").attr("class", "red");
+        });
+        // val()
+        $("#sname").val("Parth Kathiriya");
+        $("#sclass").val("MCA");
+        $("#scountry").val("India");
+      });
+    </script>
+  </body>
+</html>

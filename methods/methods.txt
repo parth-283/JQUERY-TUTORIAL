@@ -1,0 +1,13 @@
+    ** Get Methods **
+        text()
+        html()
+        attr()
+        val()
+
+    ** Set Methods **
+        text()
+        html()
+        attr()
+        val()
+
+
