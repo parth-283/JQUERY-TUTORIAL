@@ -1,0 +1,15 @@
+
+    ** Ancestors Methods **
+    psrent()
+    parents()
+    parentsUntil()
+    closest()
+    offsetParent()
+
+    ** Descendants Methods **
+
+    ** Siblings Methods **
+
+    ** Filtering Methods **
+
+

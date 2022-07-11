@@ -17,19 +17,3 @@
     ** Animate effect **
 
     ** Stop effect **
-
-    ## DOM Traversing Method ##
-    ** Ancestors Methods **
-    psrent()
-    parents()
-    parentsUntil()
-    closest()
-    offsetParent()
-
-    ** Descendants Methods **
-
-    ** Siblings Methods **
-
-    ** Filtering Methods **
-
-
