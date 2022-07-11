@@ -19,3 +19,15 @@
         css()
         
      **  On & Off Methods **
+        on()
+        off()
+
+    **  Append & Prepend Methods **
+        append()
+        prepend()
+
+  **  After & Before Methods **
+        after()
+        before()
+
+    

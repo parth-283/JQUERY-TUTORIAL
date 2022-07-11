@@ -57,6 +57,10 @@
       <button id="togglebtn">Toggle Class</button>
       <button id="styleBtn">Add Style</button>
       <button id="removeevent">Remove Event</button>
+      <button id="appendbtn">Append</button>
+      <button id="prependbtn">Prepend</button>
+      <button id="afterbtn">After</button>
+      <button id="beforebtn">Before</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -158,6 +162,24 @@
         $("#removeevent").click(function () {
           $("#box").off("mouseover mouseout ");
         });
+        //  **  Append & Prepend Methods **
+        // Append
+        $("#appendbtn").click(function(){
+          $("#box").append("<h2> Append : Parth Kathiriya</h2>")
+        })
+        // Prepend
+        $("#prependbtn").click(function(){
+          $("#box").prepend("<h3> Prepend : Parth Kathiriya</h3>")
+        })
+         //  **   After & Before Methods **
+        // After
+        $("#afterbtn").click(function(){
+          $("#box").after("<h2> After : Parth Kathiriya</h2>")
+        })
+        // Before
+        $("#beforebtn").click(function(){
+          $("#box").before("<h3> Before : Parth Kathiriya</h3>")
+        })
       });
     </script>
   </body>
