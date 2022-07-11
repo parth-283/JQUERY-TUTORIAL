@@ -33,6 +33,9 @@
       .first {
         background: tan;
       }
+      #wrap {
+        background: rgb(158, 175, 129);
+      }
       .secound {
         background: pink;
       }
@@ -87,6 +90,8 @@
       <button id="clonebtn">Clone</button>
       <button id="replacewithbtn">Replace With</button>
       <button id="replaceallbtn">Replace All</button>
+      <button id="wrapbtn">Wrap</button>
+      <button id="unwrapbtn">Unwrap</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -237,6 +242,15 @@
         // replaceAll()
         $("#replaceallbtn").click(function () {
           $(" <h3>Replace With</h3>").replaceAll("#box p:first");
+        });
+        // **  Wrap & Unwrap Methods **
+        // Wrap()
+        $("#wrapbtn").click(function () {
+          $("#box p").wrap("<h4 id='wrap'></h4>");
+        });
+        // Unwrap()
+        $("#unwrapbtn").click(function () {
+          $("#box p").unwrap();
         });
       });
     </script>
