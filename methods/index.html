@@ -16,7 +16,6 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       #box {
-        background: pink;
         padding: 10px;
         border: 1px solid #000;
       }
@@ -29,10 +28,10 @@
         background: red;
       }
       .first {
-        background: tan !important;
+        background: tan ;
       }
       .secound {
-        background: pink !important;
+        background: pink ;
       }
     </style>
     <title>JQuery Methods</title>
@@ -50,9 +49,10 @@
         </p>
       </div>
       <button id="clickbutton">Set Value</button>
-      <button id="addbutton">Add Class</button
-      ><button id="removebtn">Remove Class</button
-      ><button id="togglebtn">Toggle Class</button>
+      <button id="addbutton">Add Class</button>
+      <button id="removebtn">Remove Class</button>
+      <button id="togglebtn">Toggle Class</button>
+      <button id="styleBtn">Add Style</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -123,10 +123,16 @@
           $("h1").removeClass("secound");
           $("#box").removeClass("first");
         });
-        // toggleClass 
+        // toggleClass
         $("#togglebtn").click(function () {
           $("h1").toggleClass("secound");
           $("#box").toggleClass("first");
+        });
+
+        //  **  Css Methods **
+        // css
+        $("#styleBtn").click(function () {
+          $("#box").css({"background":"yellow","color":"blue"});
         });
       });
     </script>
