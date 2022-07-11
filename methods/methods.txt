@@ -48,3 +48,16 @@
         Wrap()
         Unwrap()
     
+    **  Wrapall & wrapinner Methods **
+        Wrapall()
+        wrapinner()
+
+    **  Height & Width Methods **
+        Width()
+        Height()
+        innerWidth()
+        innerHeight()
+        outerWidth()
+        outerHeight()
+        outerWidth(true)
+        outerHeight(true)
