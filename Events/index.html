@@ -12,6 +12,7 @@
     ></script>
     <style>
       body {
+        background: rgb(190, 253, 184);
         font-family: Arial, Helvetica, sans-serif;
       }
       #box {
@@ -19,12 +20,17 @@
         padding: 10px;
         border: 1px solid #000;
       }
+      #sform{
+        background: rgb(192, 255, 245);
+        border: 1px solid #000;
+        padding: 10px;
+      }
     </style>
-    <title>Events</title>
+    <title>JQuery Events</title>
   </head>
   <body>
     <div class="main">
-      <h1>JQuery Events</h1>
+      <h1 class="heading">JQuery Events</h1>
       <div id="box" class="test">
         <h2>Test Box 1</h2>
         <p>
@@ -70,12 +76,26 @@
           $("#box").css("background-color", "darkgreen");
         });
         // mouseenter
-        $("#box").mouseenter(function () {
-          $("#box").css("font-size", "30px");
+        $("#box, #sform").mouseenter(function () {
+          $(this).css("font-size", "20px");
+          $(this).css("background-color", "lime");
         });
         // mouseleave
-        $("#box").mouseleave(function () {
-          $("#box").css("font-size", "large");
+        $("#box, #sform").mouseleave(function () {
+          $(this).css("font-size", "large");
+          $(this).css("background-color", "");
+        });
+          // mouseenter For Heading
+          $(".heading").mouseenter(function () {
+          $(this).css("background-color", "darkblue");
+          $(this).css("color", "white");
+          $(this).css("text-decoration", "underline")
+        });
+        // mouseleave For Heading
+        $(".heading").mouseleave(function () {
+          $(this).css("background-color", "skyblue");
+          $(this).css("color", "");
+          $(this).css("text-decoration", "line-through")
         });
         // ## Keyboard Events ##
         // keypress
@@ -110,7 +130,7 @@
         // submit
         $("#sform").submit(function () {
           $(this).css("background-color", "red");
-          alert("Submited")
+          alert("Submited");
         });
       });
     </script>
