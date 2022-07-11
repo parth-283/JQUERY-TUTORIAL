@@ -10,4 +10,7 @@
         attr()
         val()
 
-
+     **  Class Methods **
+        addClass()
+        removeClass()
+        toggleClass()

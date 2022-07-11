@@ -28,13 +28,19 @@
       .red {
         background: red;
       }
+      .first {
+        background: tan !important;
+      }
+      .secound {
+        background: pink !important;
+      }
     </style>
     <title>JQuery Methods</title>
   </head>
   <body>
     <div class="main">
       <h1 class="heading">JQuery Methods</h1>
-      <div id="box" class="test">
+      <div id="box">
         <h2>Test Box 1</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
@@ -44,6 +50,9 @@
         </p>
       </div>
       <button id="clickbutton">Set Value</button>
+      <button id="addbutton">Add Class</button
+      ><button id="removebtn">Remove Class</button
+      ><button id="togglebtn">Toggle Class</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -103,6 +112,22 @@
         $("#sname").val("Parth Kathiriya");
         $("#sclass").val("MCA");
         $("#scountry").val("India");
+        // ** Class Methods **
+        // addClass
+        $("#addbutton").click(function () {
+          $("#box ").addClass("first");
+          $("h1").addClass("secound");
+        });
+        // removeClass
+        $("#removebtn").click(function () {
+          $("h1").removeClass("secound");
+          $("#box").removeClass("first");
+        });
+        // toggleClass 
+        $("#togglebtn").click(function () {
+          $("h1").toggleClass("secound");
+          $("#box").toggleClass("first");
+        });
       });
     </script>
   </body>
