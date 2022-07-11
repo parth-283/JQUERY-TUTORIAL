@@ -17,3 +17,5 @@
 
      **  Css Methods **
         css()
+        
+     **  On & Off Methods **

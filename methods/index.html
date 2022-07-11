@@ -28,10 +28,13 @@
         background: red;
       }
       .first {
-        background: tan ;
+        background: tan;
       }
       .secound {
-        background: pink ;
+        background: pink;
+      }
+      .boxbg {
+        background-color: brown;
       }
     </style>
     <title>JQuery Methods</title>
@@ -53,6 +56,7 @@
       <button id="removebtn">Remove Class</button>
       <button id="togglebtn">Toggle Class</button>
       <button id="styleBtn">Add Style</button>
+      <button id="removeevent">Remove Event</button>
       <div>
         <h2>Form</h2>
         <form action="" id="sform">
@@ -128,11 +132,31 @@
           $("h1").toggleClass("secound");
           $("#box").toggleClass("first");
         });
-
         //  **  Css Methods **
         // css
         $("#styleBtn").click(function () {
-          $("#box").css({"background":"yellow","color":"blue"});
+          $("#box").css({ background: "yellow", color: "blue" });
+        });
+        // **  On & Off Methods **
+        // ON
+        $("#box").on("mouseover mouseout", function () {
+          $(this).toggleClass("boxbg");
+        });
+        // *****
+        $("#box").on({
+          click: function () {
+            $(this).css("background", "pink");
+          },
+          mouseover: function () {
+            $(this).css("background", "blue");
+          },
+          mouseout: function () {
+            $(this).css("background", "orange");
+          },
+        });
+        // off
+        $("#removeevent").click(function () {
+          $("#box").off("mouseover mouseout ");
         });
       });
     </script>
