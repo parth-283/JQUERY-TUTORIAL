@@ -39,3 +39,8 @@
         prependto()
     
     **  Clone Methods **
+
+    **  ReplaceWith & ReplaceAll Methods **
+        replaceWith()
+        replaceAll()
+    
