@@ -6,10 +6,30 @@
     closest()
     offsetParent()
 
-    ** Descendants Methods **
+    ** Descendants Methods *
+    children()
+    find()
 
-    ** Siblings Methods **
+    ** Siblings Methods *
+    Siblings()
+    next()
+    nextAll()
+    nextUntil()
+    prev()
+    prevAll()
+    prevUntil()
 
     ** Filtering Methods **
+    first()
+    last()
+    eq()
+    filter()
+    not()
+    slice()
 
+    ** has & is Methods **
+    has()
+    is()
 
+     ** each Methods **
+     each()

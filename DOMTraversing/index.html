@@ -11,24 +11,24 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      div {
+        border: 1px solid black;
+        margin: 5px;
+        background-color: rgb(129, 218, 78);
       }
-
       #Main-Outer {
         border: 1px solid grey;
         background-color: lightgrey;
         margin: 10px;
         padding: 10px;
       }
-      #outer{
+      #outer {
         border: 1px solid orange;
         background-color: rgb(226, 191, 124);
         margin: 10px;
         padding: 10px;
       }
-      #inner{
+      #inner {
         border: 1px solid rgb(248, 126, 147);
         background-color: pink;
         margin: 10px;
@@ -39,7 +39,26 @@
         padding: 5px;
         margin: 10px;
       }
-      
+      #first {
+        border: 1px solid black;
+        background-color: darkslategrey;
+        color: aliceblue;
+        padding: 10px;
+        margin: 10px;
+      }
+      #first > p {
+        margin: 10px;
+      }
+      #secound {
+        border: 1px solid black;
+        background-color: midnightblue;
+        color: aliceblue;
+        padding: 10px;
+        margin: 10px;
+      }
+      #secound > p {
+        margin: 10px;
+      }
     </style>
     <title>J-QUERY_1</title>
   </head>
@@ -60,22 +79,100 @@
         </div>
       </div>
 
-      <button id="hidebtn">Hide</button>
+      <!-- <button id="hidebtn">Hide</button> -->
     </div>
+    <div id="first">
+      <p>
+        Lorem ipsum dolor sit amet
+        <b>consectetur adipisicing elit. Impedit,</b>
+        repellendus harum.
+      </p>
+      <p>
+        Dolores accusantium ipsa commodi sint dolore, officiis earum officia!
+        Saepe nesciunt minus error tenetur pariatur, ducimus fugiat sequi
+        quisquam?
+      </p>
+    </div>
+    <ul>
+      <li>Orange</li>
+      <li><span>Apple</span></li>
+      <li>Banana</li>
+      <li>Grapes</li>
+    </ul>
+    <p class="test">
+      Lorem ipsum dolor sit amet <b>consectetur adipisicing elit</b>. Impedit,
+      repellendus harum.
+    </p>
+    <p>
+      Dolores accusantium ipsa commodi sint dolore, officiis earum officia!
+      Saepe
+      <span class="test"
+        >nesciunt minus error tenetur pariatur, ducimus fugiat sequi</span
+      >
+      quisquam?
+    </p>
     <script>
       $(document).ready(function () {
         // ** Ancestors Methods **
         // psrent()
-        $('#child-C').parent().css('background','yellow')
+        /*  $('#child-C').parent().css('background','yellow')*/
         // parents()
-        $('#child-C').parents().css('background','grey')
+        /*  $('#child-C').parents().css('background','grey') */
         // parentsUntil()
-        $('#child-C').parentsUntil().css('background','pink')
+        /*  $("#child-C").parentsUntil('#Main-Outer').css("background", "pink"); */
         // closest()
+        /* $("#child-C").closest('div').css("background", "green"); */
         // offsetParent()
-        // ** Descendants Methods **
-        // ** Siblings Methods **
+        /* $("#child-C").offsetParent().css("background", "red"); */
+        // ** Descendants Methods *
+        // children()
+        /* $("#inner").children().css("background", "red"); */
+        // find()
+        /* $("#inner").find("#child-C").css("background", "yellow"); */
+        //  ** Siblings Methods *
+        // Siblings();
+        /* $("#child-C").siblings('h2').css("background", "green");  */
+        // next();
+        /* $("#child-C").next().css("background", "green"); */
+        // nextAll();
+        /* $("#child-C").nextAll().css("background", "blue"); */
+        // nextUntil();
+        /* $("#child-C").nextUntil().css("background", "lightblue"); */
+        // prev();
+        /* $("#child-C").prev().css("background", "lime"); */
+        // prevAll();
+        /* $("#child-C").prevAll().css("background", "orange"); */
+        // prevUntil();
+        /* $("#child-C").prevUntil().css("background", "lime"); */
         // ** Filtering Methods **
+        // first();
+        /* $("p").first().css("background", "orange"); */
+        // last();
+        /*  $("p").last().css("background", "orange"); */
+        // eq();
+        /* $("p").eq(2).css({ background: "lightgrey", color: "black" }); */
+        // filter();
+        /* $("p").filter(".test").css({ background: "blue" }); */
+        // not();
+        /* $("p").not(".test").css({ background: "gold" }); */
+        // slice();
+        /* $("ul li").slice(2).css({ background: "silver" }); */
+        // ** has & is Methods **
+        // has()
+        $("li").has("span").css({ background: "grey" });
+        // is()
+        $("p").click(function () {
+          if ($(this).parent().is("div")) {
+            $(this).css("background", "green");
+          } else {
+            $(this).css("background", "red");
+          }
+        });
+        // ** each Methods **
+        //  each()
+        $('li').each(function(){
+          console.log($(this).text());
+        })
       });
     </script>
   </body>
