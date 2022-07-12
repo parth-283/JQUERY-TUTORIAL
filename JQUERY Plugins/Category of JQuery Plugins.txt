@@ -1,0 +1,12 @@
+Accordions
+Charts & Graps
+Calender
+Drag & Drop
+Image Effects
+Maps
+Video & Audio Players
+Zoom effect
+Sliders
+Form Validations
+Tabs
+Popup Window
