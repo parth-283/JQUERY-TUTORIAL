@@ -1,0 +1,10 @@
+event.pageX
+event.pageY
+event.type
+event.which
+event.target
+event.preventdefault()
+event.isDefaultPrevented()
+event.stopPropagation()
+event.isPropagationStopped()
+event.data
