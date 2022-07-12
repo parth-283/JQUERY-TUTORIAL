@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #result {
+        border: 1px solid lightblue;
+        background-color: lightskyblue;
+        width: 600px;
+        height: 300px;
+        margin: auto;
+      }
+      #box {
+        border: 1px solid lightsalmon;
+        background-color: lightcoral;
+        width: 50px;
+        height: 50px;
+        /* margin: auto; */
+      }
+      a {
+        margin: auto;
+      }
+    </style>
+    <title>Properties</title>
+  </head>
+  <body>
+    <div id="result">
+      <h1 style="margin: 15px">Some Heading</h1>
+      <p style="margin: 15px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing
+      </p>
+      <p style="margin: 15px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing
+      </p>
+      <p style="margin: 15px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing
+      </p>
+      <button style="margin: 15px, bacground">Button</button>
+      <br /><br /><a
+        href="https://github.com/parth-283/JQUERY-TUTORIAL"
+        id="ancher"
+        >Parth GITHUB</a
+      >
+      <br /><br />
+      <a href="https://github.com/parth-283/JQUERY-TUTORIAL"
+        >Parth GITHUB Account</a
+      >
+    </div>
+    <div id="box"></div>
+    <br />
+    <input type="text" id="inputbox" />
+    <br />
+    <h2></h2>
+    <script>
+      $(document).ready(function () {
+        // event.pageX; event.pageY;
+        /*  $(document).mousemove(function (e) {
+          $("#result").text("X:" + e.pageX + "Y:" + e.pageY);
+          var x = e.pageX;
+          var y = e.pageY;
+          $("#box").offset({ top: y, left: x });
+        }); */
+        // event.type;
+        /*  $("#box").on("click dblclick mouseover mouseout", function (e) {
+          $('h2').html("Events : "+ e.type)
+        }); */
+        // event.which;
+        /*   $("#box").on("mouseover mouseout mousedown", function (e) {
+          $('h2').html("Events : "+ e.type+ " : " + e.which)
+        });
+        $('#inputbox').on("keydown",function(e){
+          $('h2').html("Events : "+ e.type+ " : " + e.which)
+        }) */
+        // event.target;
+        /*   $("#result").on("click",function(e){
+          $('h2').html("Target Element: "+ e.target.innerHTML)
+        }); */
+        // event.preventdefault();
+        $("#ancher").on("click", function (e) {
+          e.preventDefault();
+        });
+        // event.isDefaultPrevented();
+        $("#ancher").on("click", function (e) {
+          $("h2").html(e.isDefaultPrevented());
+        });
+        // event.stopPropagation();  event.isPropagationStopped();
+        $("#result").on("click", function (e) {
+          alert("The div element is clicked");
+        });
+        $("h1").on("click", function (e) {
+          $("h2").html(e.stopPropagation());
+          alert("The h1 element is clicked  : " + e.isPropagationStopped());
+        });
+        $("p").on("click", function (e) {
+          $("h2").html(e.isPropagationStopped());
+          alert("The p element is clicked : " + e.isPropagationStopped());
+        });
+        $("button").on("click", function (e) {
+          alert("The button element is clicked");
+        });
+        // event.data;
+        $("p").each(function (i) {
+          $(this).on("click",{value:i},function(e){
+            alert(e.data.value)
+          })
+        });
+      });
+    </script>
+  </body>
+</html>
