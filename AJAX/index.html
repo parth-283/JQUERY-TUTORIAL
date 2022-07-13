@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="/jquery/jquery.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #box {
+        border: 1px solid black;
+        background-color: rgb(176, 245, 207);
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+      }
+      #getdata {
+        border: 1px solid black;
+        background-color: rgb(224, 245, 176);
+        margin: 10px;
+        padding: 10px;
+      }
+      #getdata ol {
+        margin-top: 5px;
+        margin-left: 20px;
+      }
+      #postdata {
+        border: 1px solid black;
+        background-color: rgb(176, 200, 245);
+        margin: 10px;
+        padding: 10px;
+      }
+      #postformdata {
+        margin: 10px;
+        text-align: center;
+      }
+      input {
+        margin: 5px;
+      }
+      button {
+        padding: 5px;
+        margin: 10px;
+      }
+    </style>
+    <title>J-QUERY WITH AJAX</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>JQuery AJAX</h1>
+      <div id="box" class="test">
+        <div id="getdata">
+          <h3>GET Data</h3>
+          <ol>
+            <!-- <oi>Data show here...</oi> -->
+          </ol>
+        </div>
+        <div id="postdata">
+          <h3>POST Data</h3>
+          <form id="postformdata">
+            <span>Name:</span> <br /><input
+              type="text"
+              name="name"
+              id="formname"
+            /><br />
+            <span> Password: </span> <br /><input
+              type="text"
+              name="password"
+              id="formpassword"
+            />
+            <br /><button id="formgetdata">Submit</button>
+          </form>
+          <p>Your Data show here...</p>
+          <button id="fadetoggle">show Data</button>
+        </div>
+      </div>
+      <div>
+        <button id="AGDBTN">AJAX GET DATA</button>
+        <button id="APDBTN">AJAX POST DATA</button>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        let User = { name: "", password: "" };
+        // FORM SUBMIT GET DATA TO TEXTBOX
+        $("#formgetdata").click(function (e) {
+          e.preventDefault();
+          User.name = $("#formname").val();
+          User.password = $("#formpassword").val();
+          // console.log(`NAME : ${name}, Password : ${password}`);
+          console.log(User, "User***********");
+        });
+
+        // GET DATA
+        $("#AGDBTN").click(function () {
+          /* $.get(
+               "https://jsonplaceholder.typicode.com/users",
+               function (data, status) {
+                 jQuery.map(data, function (item) {
+                   console.log(item);
+                     $("ol").append(`<li>Name : ${item.name}</li>`);
+                 });
+
+               }
+             ); */
+          // Using $.ajax
+          $.ajax("https://jsonplaceholder.typicode.com/users", {
+            dataType: "json", // type of response data
+            timeout: 500, // timeout milliseconds
+            success: function (data, status, xhr) {
+              // success callback function
+              jQuery.map(data, function (item) {
+                //console.log(item);
+                $("ol").append(`<li>ID : ${item.id}, Name : ${item.name}</li>`);
+              });
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+              // error callback
+              $("ol").append(`<li>Error : ${errorMessage}</li>`);
+            },
+          });
+        });
+
+        // POST DATA
+        $("#fadetoggle").click(function () {
+          $("p").fadeToggle("slow");
+        });
+        // $.post('https://jsonplaceholder.typicode.com/posts',)
+        $("#APDBTN").click(function () {
+          /* $.post(
+            "https://jsonplaceholder.typicode.com/posts", // url
+            { myData: "This is my data." }, // data to be submit
+            function (data, status, jqXHR) {
+              // success callback
+              $("p").append(
+                "status: " +
+                  status +
+                  ", Data: " +
+                  data.myData +
+                  ", Id: " +
+                  data.id
+              );
+            }
+          )
+            .done(function () {
+              alert("Request done!");
+            })
+            .fail(function (jqxhr, settings, ex) {
+              alert("failed, " + ex);
+            }); */
+          // Using $.ajax
+          $.ajax("https://jsonplaceholder.typicode.com/posts", {
+            type: "POST",
+            dataType: "json", // type of response data
+            data: User,
+            success: function (data, status, xhr) {
+              // success callback function
+              //console.log(item);
+              console.log(data);
+              $("p").append(
+                "status: " +
+                  status +
+                  ", Name: " +
+                  data.name +
+                  ", Password: " +
+                  data.password +
+                  ", Id: " +
+                  data.id
+              );
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+              // error callback
+              $("ol").append(`<li>Error : ${errorMessage}</li>`);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
