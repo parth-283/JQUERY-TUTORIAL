@@ -50,9 +50,20 @@
       #putdata {
         background-color: rgb(176, 245, 179);
       }
+      #collectionofbtn{
+        background-color: rgb(176, 245, 207);
+        text-align: center;
+      }
       button {
+        background-color: darkcyan;
+        border: 1px solid lightblue;
+        color: aliceblue;
         padding: 5px;
         margin: 10px;
+        border-radius: 15px;
+      }
+      button:hover{
+        box-shadow: 2px 2px 5px rgb(4, 168, 168)
       }
     </style>
     <title>J-QUERY WITH AJAX</title>
@@ -112,8 +123,8 @@
           <p id="putresponse">Your Response show here...</p>
         </div>
       </div>
-      <div>
-        <button id="fadetoggle">show Data</button>
+      <div id="collectionofbtn">
+        <button id="fadetoggle">Show Data</button>
         <button id="AGDBTN">AJAX GET DATA</button>
         <button id="APDBTN">AJAX POST DATA</button>
         <button id="ADDBTN">AJAX DELETE DATA</button>
