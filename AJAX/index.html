@@ -19,17 +19,21 @@
         border: 1px solid black;
         margin: 10px;
         padding: 10px;
+        border-radius: 15px;
+        
       }
       form {
         text-align: center;
       }
       #box {
         background-color: rgb(176, 245, 207);
-
+        box-shadow: 2px 2px 5px rgb(95, 247, 163);
         position: relative;
       }
       #getdata {
         background-color: rgb(224, 245, 176);
+        box-shadow: 2px 2px 5px rgb(215, 250, 134);
+
       }
       #getdata ul {
         margin-top: 5px;
@@ -37,6 +41,7 @@
       }
       #postdata {
         background-color: rgb(176, 200, 245);
+        box-shadow: 2px 2px 5px  rgb(126, 167, 241);
       }
       #postformdata {
         margin: 10px;
@@ -46,9 +51,12 @@
       }
       #deletedata {
         background-color: rgb(225, 176, 245);
+        box-shadow: 2px 2px 5px   rgb(215, 135, 247);
       }
       #putdata {
         background-color: rgb(176, 245, 179);
+        box-shadow: 2px 2px 5px  rgb(119, 245, 126);
+
       }
       #collectionofbtn{
         background-color: rgb(176, 245, 207);
@@ -233,8 +241,8 @@
               $("#deldata").append(`Delete Your ID:${DID} data `);
             },
             error: function (request, msg, error) {
-              // handle failure
-              console.log(request, msg, error);
+              // handle failuredeldata
+              $("#deldata").append(`Status: ${request.status}, StatusText: ${request.statusText}`);
             },
           });
         });
@@ -255,7 +263,7 @@
             },
             error: function (request, msg, error) {
               // handle failure
-              console.log(request, msg, error);
+              $("#putresponse").append(`Status: ${request.status}, StatusText: ${request.statusText}`);
             },
           });
         });
